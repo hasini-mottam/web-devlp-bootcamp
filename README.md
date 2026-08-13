@@ -1,3 +1,3 @@
 # web-devlp-bootcamp
 
-# first
+# this is my first project
