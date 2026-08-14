@@ -30,7 +30,7 @@ function toggle(){
 }
 
 function random(){
-  fetch('https://randomuder.me/api')
+  fetch('https://randomuser.me/api')
   .then(function(response){
     return response.json();
   })
