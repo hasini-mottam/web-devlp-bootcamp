@@ -9,15 +9,33 @@ const port = process.env.PORT || 4040
 const users = [
  {
    "id" : 1,
-   "name" : "Alejandra Romero",
+   "name" : "Damon Salvatore",
    "gender" : "male",
    "image" : "https://randomuser.me/api/portraits/women/62.jpg"
  },
  {
    "id" : 2,
-   "name" : "Olivia Morris",
+   "name" : "Elena Gilbert",
    "gender" : "female",
    "image" : "https://randomuser.me/api/portraits/women/31.jpg"
+ },
+ {
+  "id" : 3,
+  "name" : "Stefan Salvatore",
+  "gender" : "male",
+  "image" : "https://randomuser.me/api/portraits/men/32.jpg"
+ },
+ {
+  "id" : 4,
+  "name" : "Caroline Forbes",
+  "gender" : "female",
+  "image" : "https://randomuser.me/api/portraits/women/33.jpg"  
+ },
+ {
+  "id" : 5,
+  "name" : "Bonnie Bennett",
+  "gender" : "female",
+  "image" : "https://randomuser.me/api/portraits/women/34.jpg"
  }
 ]
 
@@ -45,7 +63,7 @@ app.get("/api/users/:id", function(req, res)
 
  if(userid == -1)
  {
-   res.status(404).json({"message" : "user not found"})
+   return res.status(404).json({"message" : "user not found"})
  }
  res.status(200).json(users[userid])
 })
@@ -62,7 +80,7 @@ var newuserid = users.length + 1;
 // post: add a new user
 app.post("/api/users", function(req, res)
 {
- if(!req.body.name || !req.body.gender || !req.body.image)
+  if(!req.body.name || !req.body.gender || !req.body.image)
    return res.json({"message" : " name, gender and image is required"})
  let user = req.body;
  user.id = newuserid;
