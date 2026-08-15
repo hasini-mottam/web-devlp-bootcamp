@@ -11,7 +11,7 @@ const users = [
    "id" : 1,
    "name" : "Damon Salvatore",
    "gender" : "male",
-   "image" : "https://randomuser.me/api/portraits/women/62.jpg"
+   "image" : "https://randomuser.me/api/portraits/men/32.jpg"
  },
  {
    "id" : 2,
@@ -23,7 +23,7 @@ const users = [
   "id" : 3,
   "name" : "Stefan Salvatore",
   "gender" : "male",
-  "image" : "https://randomuser.me/api/portraits/men/32.jpg"
+  "image" : "https://randomuser.me/api/portraits/men/10.jpg"
  },
  {
   "id" : 4,
